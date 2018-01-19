@@ -4,7 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 import store from './store';
-import bookstore from 'src/bookstore';
+// import bookstore from 'src/bookstore';
 
 // 关闭生产模式下的提示
 Vue.config.productionTip = false;
@@ -18,18 +18,18 @@ Vue.component('global', {
   template: '<div>我是全局组件{{message}}</div>'
 })
 
-// window.vm = new Vue({
-//   el: '#app',
-//   router,
-//   store,
-//   template: '<App/>',
-//   components: { App }
-// });
-
 window.vm = new Vue({
-  el: '#bookstore',
+  el: '#app',
   router,
   store,
-  template: '<bookstore/>',
-  components: { bookstore }
+  template: '<App/>',
+  components: { App }
 });
+
+// window.vm = new Vue({
+//   el: '#bookstore',
+//   router,
+//   store,
+//   template: '<bookstore/>',
+//   components: { bookstore }
+// });
